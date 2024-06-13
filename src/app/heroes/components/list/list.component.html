@@ -1,0 +1,20 @@
+<p
+  *ngIf="removedHero else notRemoveHeroMessage">
+  Heroe eliminado <small class="text-danger">{{removedHero}}</small>
+</p>
+
+<button
+  class="btn btn-danger"
+  (click)="eliminarHeroe()"
+  *ngIf="heroes.length > 0">Eliminar heroe
+</button>
+
+<ul class="mt-2 list-group">
+  <li *ngFor="let hero of heroes" class="list-group-item">
+    {{ hero }}
+  </li>
+</ul>
+
+<ng-template #notRemoveHeroMessage>
+  <p *ngIf="!removedHero">No ha borrado nada</p>
+</ng-template>

@@ -1,0 +1,20 @@
+<h1>{{nombre}}</h1>
+
+<dl>
+  <td>Nombre:</td>
+  <dd>{{nombre}}</dd>
+
+  <td>Edad:</td>
+  <dd>{{edad}}</dd>
+
+  <td>Metodo:</td>
+  <dd>{{ obtenerDescripcioHeroe() }}</dd>
+
+  <td>Capitalizado:</td>
+  <dd>{{nombreCapitalizado}}</dd>
+
+</dl>
+
+<button class="btn btn-primary mx-2" (click)="rename()" *ngIf="nombre === 'Spiderman'">Cambiar nombre</button>
+<button class="btn btn-primary mx-2" (click)="changeAge()" *ngIf="edad === 20">Cambiar edad</button>
+<button class="btn btn-secondary" (click)="reset()">Reiniciar</button>
